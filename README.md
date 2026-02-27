@@ -46,8 +46,8 @@ def hits_algorithm(adjacency_matrix, max_iterations=100, tol=1.0e-6):
         # Authority update
         new_authority_scores = np.dot(adjacency_matrix.T, hub_scores)
         new_authority_scores /= np.sum(new_authority_scores)
-
         # Hub update
+
         new_hub_scores = np.dot(adjacency_matrix, new_authority_scores)
         new_hub_scores /= np.sum(new_hub_scores)
 
@@ -66,10 +66,9 @@ def hits_algorithm(adjacency_matrix, max_iterations=100, tol=1.0e-6):
 # Example adjacency matrix (replace this with your own data)
 # For simplicity, using a random adjacency matrix
 adj_matrix = np.array([
-    [0,0,1,0],
-    [1,0,1,1],
-    [0,0,0,0],
-    [1,1,1,0]
+    [0, 1, 1],
+    [1, 0, 0],
+    [1, 0, 0]
 ])
 
 # Run HITS algorithm
@@ -109,7 +108,7 @@ plt.show()
 ```
 
 ### Output:
-<img width="833" height="856" alt="image" src="https://github.com/user-attachments/assets/5c9ad546-9713-4018-9ae6-ebc8115b088c" />
+<img width="790" height="590" alt="image" src="https://github.com/user-attachments/assets/0ac8ff39-9a79-46c5-9480-efbe69dc0947" />
 
 ### Result:
 Thus Link Analysis using HITS Algorithm in Python is successfully implemented.
